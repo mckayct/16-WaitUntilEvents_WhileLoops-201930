@@ -6,6 +6,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          and Colton McKay.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+import math
 
 def main():
     """ TESTs the functions in this module (by calling them). """
@@ -31,10 +32,13 @@ def double_a_float():
          -6.28
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #   The testing code is already written for you (above).
     # -------------------------------------------------------------------------
 
+    number = float(input('Double Float'))
+    number = number * 2
+    print(number)
 
 
 def print_an_integer_many_times():
@@ -63,10 +67,13 @@ def print_an_integer_many_times():
          10
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   The testing code is already written for you (above).
     # -------------------------------------------------------------------------
 
+    number = int(input("Many Times"))
+    for k in range(number):
+        print(number*2)
 
 def print_an_integer_many_times_on_one_row():
     """
@@ -82,12 +89,19 @@ def print_an_integer_many_times_on_one_row():
          1010101010
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   The testing code is already written for you (above).
     #
     # HINT: One way to print on a SINGLE line is to build up a string
     #       and then print that (single) string.
     # -------------------------------------------------------------------------
+
+    number = int(input('Many Times one row'))
+    sequence = ''
+    for k in range(number):
+        number_string = str(number*2)
+        sequence = sequence + number_string
+    print(sequence)
 
 
 def input_it_all():
@@ -122,10 +136,19 @@ def input_it_all():
          Peace & Love.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   The testing code is already written for you (above).
     # -------------------------------------------------------------------------
 
+    print('Intput all below')
+    float_var = float(input('Place Float Here'))
+    integer_var = int(input("Place Integer Here"))
+    string_var = str(input("Place String Here"))
+
+    for k in range(integer_var):
+        print(math.sqrt(float_var))
+    for k in range(integer_var):
+        print(string_var)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
